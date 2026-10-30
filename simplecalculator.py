@@ -1,15 +1,22 @@
 
-
-num1 = int(input("Enter first number: "))
-num2 = int(input("Enter second number: "))
+try:
+ num1 = int(input("Enter first number: "))
+ num2 = int(input("Enter second number: "))
+except ValueError:
+    print("Error:Please enter whole numbers only")
+    exit()
 
 print("/nSelect an operator")
 print("1.Addition")
 print("2.Subtraction")
 print("3.Multiplication")
 print("4.Division")
+try:
+ choice = int(input("Enter your choice(1-4): "))
+except ValueError:
+    print("Error:Choice must be a number")
+    exit()
 
-choice = int(input("Enter your choice(1-4): "))
 
 if choice == 1:
     result = num1 + num2
